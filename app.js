@@ -21,6 +21,7 @@ function myalert(){
 	if (hantei === true){
 		messageSpan.textContent = "大丈夫";
 		messageSpan.style.color = 'blue';
+		messageSpan.style.fontSize ="40px";
 	} else {
 		messageSpan.textContent = "やり直し";
 		messageSpan.style.color = 'red';
