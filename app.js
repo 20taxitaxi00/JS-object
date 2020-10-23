@@ -127,8 +127,10 @@ console.log("------ 56 ------");
 function printMaxNum(num,num2){
 	if (num > num2){
 		console.log(num);
+	} else if (num < num2) {
+		console.log(num2);
 	} else {
-		console.log(num2)
+		console.log("同じ");
 	}
 }
 printMaxNum(987,666);
@@ -138,27 +140,44 @@ console.log("------ 57 ------");
 // 関数名：getSquared
 // 引数1：1つの数値
 // 処理内容：引数で受け取った数値の2乗を計算し返す
-function getSquared(num){
+/*function getSquared(num){
 	console.log(num*num);
 }
 getSquared(12);
-getSquared(40);
+getSquared(40);*/
+// 戻り値（返り値） return 値;の形で、実行した側に戻される値
+// 引数と逆方向に値を送る（返す）
+function getSquared(num){
+	return num * num;
+}
+var result = getSquared(4);
+console.log(result);
+
 
 console.log("------ 58 ------");
 // 関数名：createSelfIntroductionText
 // 引数1：1つの文字列
 // 処理内容：「私の名前は○○です」という文字の〇〇を引数で受け取った文字列にし返す
-function createSelfIntroductionText(text){
+/*function createSelfIntroductionText(text){
 	console.log(`私の名前は${text}です。`);
 }
 createSelfIntroductionText("澤岻剛毅");
-createSelfIntroductionText("タクシー");
+createSelfIntroductionText("タクシー");*/
+
+function createSelfIntroductionText(name){
+	var msg = (`私の名前は${name}です。`);
+	return msg;
+}
+var result = createSelfIntroductionText("澤岻剛毅");
+console.log(result);
+
+
 
 console.log("------ 59 ------");
 // 関数名：isEvenNumber
 // 引数1：1つの数値
 // 処理内容：引数で渡された値が偶数の場合は true、そうでない場合は false を返す。
-function isEvenNumber(num){
+/*function isEvenNumber(num){
 	if (num % 2 === 0){
 		console.log("true");
 	} else {
@@ -166,7 +185,19 @@ function isEvenNumber(num){
 	}
 }
 isEvenNumber(2000);
-isEvenNumber(1999);
+isEvenNumber(1999);*/
+
+function isEvenNumber(num){
+	if (num % 2 === 0){
+		return true;
+	} else {
+		return false;
+	}
+}
+
+var result = isEvenNumber(3);
+console.log(result);
+
 
 console.log("------ 60 ------");
 // 関数名：isSeedKun
@@ -182,4 +213,14 @@ function isSeedKun(text){
 isSeedKun("SeedKun");
 isSeedKun("GoukiKun");
 
+
+function isSeedKun(text){
+	if (text === "SeedKun"){
+		return true;
+	} else {
+		return false;
+	}
+}
+var result = isSeedKun("GoukiKun");
+console.log(result);
 
