@@ -113,6 +113,11 @@ function printMessage(text,num){
 printMessage("あいうえお",5);
 
 
+
+
+
+
+
 console.log("------ 練習問題 ------");
 console.log("------ 56 ------");
 // 関数名：printMaxNum
